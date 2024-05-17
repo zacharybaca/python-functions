@@ -24,19 +24,19 @@ def divide(num1, num2):
 # Task 2
 number_one = int(input("Please Input a Value for Your First Number: "))
 number_two = int(input("Please Input a Value for Your Second Number: "))
-operation_choice = input("Would You Like to Add, Subtract, Multiply, or Divide Your Two Values?")
+operation_choice = input("Would You Like to Add, Subtract, Multiply, or Divide Your Two Values?").lower()
 
 # Task 3
 def calculate(operation, num1, num2):
-    if operation == "add" and type(num1) == 'int' and type(num2) == 'int':
+    if operation == "add" and type(num1) is int and type(num2) is int:
         add(num1,num2)
-    elif operation == "subtract" and type(num1) == 'int' and type(num2) == 'int':
+    elif operation == "subtract" and type(num1) is int and type(num2) is int:
         subtract(num1,num2)
-    elif operation == "multiply" and type(num1) == 'int' and type(num2) == 'int':
+    elif operation == "multiply" and type(num1) is int and type(num2) is int:
         multiply(num1,num2)
-    elif operation == "divide" and type(num1) == 'int' and type(num2) == 'int':
+    elif operation == "divide" and type(num1) is int and type(num2) is int:
         divide(num1,num2)
-    elif type(num1) != 'int' and type(num2) != 'int':
+    elif type(num1) is not int and type(num2) is not int:
         print('Please Enter Valid Integers')
         number_one = int(input("Please Input a Value for Your First Number: "))
         number_two = int(input("Please Input a Value for Your Second Number: "))
